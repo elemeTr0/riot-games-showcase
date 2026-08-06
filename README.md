@@ -17,10 +17,6 @@ A portfolio-style website inspired by Riot Games, showcasing the company's histo
 - CSS3
 - JavaScript
 
-## Project Preview
-
-(Add screenshots here)
-
 ## Purpose
 
 This project was created to practice front-end development, UI design, and JavaScript interactivity.
