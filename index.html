@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Riot Games</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =========================
+     TEAM MODAL
+     ========================= -->
+
+<div id="overlay">
+
+    <div id="teamModal">
+
+        <button id="closeModal">&times;</button>
+
+        <h2>Development Team</h2>
+
+        <p><strong>Created by:</strong> Mateo Boris, Aleksandar Masalkovski, Luka Efremovski</p>
+
+        <p>Faculty of Computer Science & Engineering</p>
+
+        <p>This website was created as a portfolio project inspired by Riot Games and is intended for educational purposes only.</p>
+
+    </div>
+
+</div>
+
+<!-- =========================
+     SIDE NAVIGATION
+     ========================= -->
+
+<div id="sideNav">
+
+    <a href="#aboutSection" class="sideDot active">
+        <span>About</span>
+    </a>
+
+    <a href="#gamesSection" class="sideDot">
+        <span>Games</span>
+    </a>
+
+    <a href="#newsSection" class="sideDot">
+        <span>News</span>
+    </a>
+
+    <a href="#contactSection" class="sideDot">
+        <span>Contact</span>
+    </a>
+
+</div>
+
+
+<!-- =========================
+     TOOLBAR
+     ========================= -->
+
+<div id="toolbar">
+
+    <a href="index.html">
+        <img src="src/riot.png" id="riot">
+    </a>
+
+    <div class="buttons">
+
+<button id="team">
+    TEAM
+</button>
+
+        <button id="play">
+            <b>PLAY</b>
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     ABOUT SECTION
+     ========================= -->
+
+<section id="aboutSection">
+
+    <div id="main">
+
+        <div id="aboutHero">
+
+            <img src="src/riot.png" id="riotheader">
+
+            <h1>
+                WE CREATE WORLDS
+            </h1>
+
+            <p class="subtitle">
+                Riot Games is a global video game developer and publisher
+                focused on creating unforgettable player experiences.
+            </p>
+
+        </div>
+
+
+        <div id="aboutCard">
+
+            <p>
+                Riot Games is an American video game developer and publisher
+                founded in 2006 by Brandon Beck and Marc Merrill. The company
+                was created with the goal of developing games built around
+                long-term player engagement and strong communities.
+
+                <br><br>
+
+                Known for titles such as League of Legends and VALORANT,
+                Riot has expanded beyond game development into esports,
+                entertainment, and global competitive experiences. The company
+                continues to support its games through frequent updates,
+                new content, and community-focused events.
+            </p>
+
+        </div>
+
+
+        <div id="stats">
+
+            <div>
+                <h2>2006</h2>
+                <p>Founded</p>
+            </div>
+
+
+            <div>
+                <h2>Los Angeles</h2>
+                <p>Headquarters</p>
+            </div>
+
+
+            <div>
+                <h2>6+</h2>
+                <p>Major Games</p>
+            </div>
+
+
+            <div>
+                <h2>Global</h2>
+                <p>Esports Scene</p>
+            </div>
+
+        </div>
+
+
+        <div id="images">
+
+            <img src="src/esports.jpg">
+
+            <img src="src/trophyesport.jpg">
+
+            <img src="src/valesports.jpg">
+
+        </div>
+
+
+    </div>
+
+</section>
+
+<div class="border"></div>
+<!-- =========================
+     GAMES SECTION
+     ========================= -->
+
+<section id="gamesSection">
+
+    <div id="a">
+
+
+        <div class="gameHeader">
+
+            <h1>EXPLORE OUR GAMES</h1>
+
+            <p>
+                Discover Riot Games' collection of competitive
+                and immersive experiences.
+            </p>
+
+        </div>
+
+
+
+        <div class="slide">
+
+
+            <button class="nav" id="prev">
+                <img src="src/right-arrow.png">
+            </button>
+
+
+
+            <div id="text">
+
+                <span class="category">
+                    FEATURED GAME
+                </span>
+
+
+                <h1 id="sliderTitle"></h1>
+
+
+                <p id="sliderText"></p>
+
+
+            </div>
+
+
+
+            <div class="imageWrapper">
+
+                <img id="sliderImage" src="src/esports.jpg">
+
+            </div>
+
+
+
+            <button class="nav" id="next">
+                <img src="src/right-arrow.png">
+            </button>
+
+
+        </div>
+
+
+
+        <div id="slideCounter">
+
+            <span id="currentSlide">1</span>
+
+            <div class="progress"></div>
+
+            <span id="totalSlides">6</span>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+<div class="border"></div>
+<!-- =========================
+     NEWS SECTION
+     ========================= -->
+
+<section id="newsSection">
+
+    <h1>Latest News</h1>
+
+    <div id="newsContainer">
+
+        <div class="newsCard">
+            <img src="src/lolclassic.avif">
+
+            <h2>Run it back to League Classic</h2>
+
+            <p>
+                Quit messing with the timeline, Zilean.
+            </p>
+        </div>
+
+
+        <div class="newsCard">
+            <img src="src/loldc.webp">
+
+            <h2>Connect Your Riot and Discord Accounts</h2>
+
+            <p>
+                Link your accounts to play more games with your friends, no alt-tabbing needed.
+            </p>
+        </div>
+
+
+        <div class="newsCard">
+            <img src="src/bundleval.jpg">
+
+            <h2>Give Back Bundle Funds Raised</h2>
+
+            <p>
+                The Give Back Bundle has officially wrapped and thanks to your support, we've raised and incredible $6.5M for the Riot Games Social Impact Fund!
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<div class="bla"></div>
+
+<!-- =========================
+     CONTACT / FOOTER
+     ========================= -->
+
+<footer id="contactSection" class="footer">
+
+    <div class="footerColumn">
+        <h3>Find Us</h3>
+        <p>Riot Games</p>
+        <p>123 Champion Avenue</p>
+        <p>Los Angeles, California</p>
+        <p>United States</p>
+    </div>
+
+    <div class="footerColumn">
+        <h3>Contact</h3>
+        <p>support@riotgames.com</p>
+        <p>+1 (310) 555-0198</p>
+        <p>Mon - Fri</p>
+        <p>9:00 AM - 6:00 PM (PST)</p>
+    </div>
+
+    <div class="footerColumn">
+        <h3>More Links</h3>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Player Support</a>
+        <a href="#">Careers</a>
+    </div>
+
+</footer>
+
+<div class="footerBottom">
+    <p>© 2026 Riot Games Portfolio. Created for educational purposes. Riot Games, League of Legends, VALORANT, Teamfight Tactics, Legends of Runeterra, Wild Rift and 2XKO are trademarks of Riot Games, Inc.</p>
+</div>
+
+
+<script src="javascript/index.js"></script>
+<script src="javascript/navbar.js"></script>
+<script src="javascript/team.js"></script>
+
+</body>
+</html>

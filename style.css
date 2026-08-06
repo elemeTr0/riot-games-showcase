@@ -1,0 +1,1285 @@
+/* =========================
+   GLOBAL
+========================= */
+
+:root {
+    --riot-red: #ff4655;
+    --dark: #222;
+    --light-bg: #ffecec;
+    --text: #222;
+    --white: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: sans-serif;
+
+    background: var(--light-bg);
+    color: white;
+}
+
+
+/* =========================
+   SIDE NAVIGATION
+========================= */
+
+#sideNav {
+    position: fixed;
+
+    left: 25px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 28px;
+
+    z-index: 9999;
+}
+
+#sideNav::before {
+    content: "";
+
+    position: absolute;
+
+    top: 7px;
+    bottom: 7px;
+
+    width: 2px;
+
+    background: #bdbdbd;
+
+    z-index: -1;
+}
+
+.sideDot {
+    width: 15px;
+    height: 15px;
+
+    border-radius: 50%;
+
+    background: #bdbdbd;
+
+    border: 3px solid var(--light-bg);
+
+    position: relative;
+
+    transition: .3s;
+
+    text-decoration: none;
+}
+
+.sideDot span {
+    position: absolute;
+
+    left: 28px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--text);
+
+    font-size: 14px;
+    font-weight: bold;
+
+    opacity: 0;
+
+    transition: .3s;
+
+    white-space: nowrap;
+}
+
+.sideDot:hover {
+    background: var(--riot-red);
+    transform: scale(1.3);
+}
+
+.sideDot:hover span {
+    opacity: 1;
+}
+
+.sideDot.active {
+    background: red;
+    transform: scale(1.4);
+}
+
+.sideDot.active span {
+    opacity: 1;
+    color: red;
+}
+
+
+/* =========================
+   SCROLL OFFSET
+========================= */
+
+#aboutSection,
+#gamesSection,
+#newsSection,
+#contactSection {
+    scroll-margin-top: 150px;
+}
+
+
+/* =========================
+   TOOLBAR
+========================= */
+
+#toolbar {
+    height: 8em;
+
+    display: flex;
+    align-items: center;
+
+    background: var(--dark);
+
+    padding-left: 4em;
+}
+
+#riot {
+    height: 8em;
+}
+
+.buttons {
+    margin-left: auto;
+    margin-right: 30px;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* =========================
+   TEAM BUTTON
+========================= */
+
+#team {
+    cursor: pointer;
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-right: 2em;
+
+    transition: .3s;
+}
+
+#team:hover {
+    color: var(--riot-red);
+}
+/* =========================
+   PLAY BUTTON
+========================= */
+
+#play {
+    cursor: pointer;
+
+    width: 9em;
+    height: 3.8em;
+
+    border: none;
+    border-radius: 999px;
+
+    background: linear-gradient(135deg,#d13639,var(--riot-red));
+
+    color:white;
+
+    font-weight:700;
+
+    letter-spacing:1.5px;
+
+    transition:.3s;
+
+    box-shadow:0 8px 18px rgba(209,54,57,.35);
+}
+
+#play:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+            0 14px 28px rgba(255,70,85,.45);
+}
+
+#play:active {
+    transform: translateY(0);
+}
+
+b {
+    font-size:20px;
+    letter-spacing:2px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+#main {
+
+    width:100%;
+
+    padding:5em 8em;
+
+}
+
+
+#aboutHero {
+
+    text-align:center;
+
+    max-width:1000px;
+
+    margin:auto;
+}
+
+
+#riotheader {
+
+    width:260px;
+
+    margin-bottom:2em;
+
+}
+
+
+#aboutHero h1 {
+
+    color:#222;
+
+    font-size:4em;
+
+    letter-spacing:4px;
+
+    margin:0;
+}
+
+
+.subtitle {
+
+    color:#555;
+
+    font-size:1.5em;
+
+    line-height:1.6;
+}
+
+
+/* TEXT CARD */
+
+#aboutCard {
+
+    max-width:1200px;
+
+    margin:5em auto;
+
+    padding:3em;
+
+    background:white;
+
+    border-radius:20px;
+
+
+    box-shadow:
+            0 20px 50px rgba(0,0,0,.12);
+
+
+    text-align:center;
+
+}
+
+
+#aboutCard p {
+
+    color:#333;
+
+    font-size:1.25em;
+
+    line-height:1.8;
+
+}
+
+
+/* STATS */
+
+#stats {
+
+    max-width:1100px;
+
+    margin:4em auto;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    text-align:center;
+
+}
+
+
+#stats div {
+
+    width:200px;
+
+}
+
+
+#stats h2 {
+
+    color:#ff4655;
+
+    font-size:2.5em;
+
+    margin:0;
+}
+
+
+#stats p {
+
+    color:#555;
+
+    font-weight:bold;
+
+}
+
+
+/* IMAGE GALLERY */
+
+#images {
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:2em;
+
+    margin-top:5em;
+
+}
+
+
+#images img {
+
+    width:30%;
+
+    height:250px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+
+    transition:.4s;
+
+    box-shadow:
+            0 15px 30px rgba(0,0,0,.2);
+
+}
+
+
+#images img:hover {
+
+    transform:
+            translateY(-15px)
+            scale(1.03);
+
+}
+/* =========================
+   DIVIDER
+========================= */
+
+.border {
+    width:100%;
+
+    border-top:1px solid #222;
+
+    opacity:.2;
+
+    margin-bottom:8em;
+}
+
+
+/* =========================
+   GAMES SECTION
+========================= */
+
+#gamesSection {
+    width:100%;
+
+    min-height:700px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:var(--text);
+}
+
+#a {
+    position:relative;
+
+    width:100%;
+
+    max-width:1600px;
+
+    margin-top:5em;
+
+    padding-bottom:6em;
+}
+
+
+/* =========================
+   SLIDER
+========================= */
+
+/* =========================
+   GAMES SECTION
+========================= */
+
+
+#gamesSection {
+
+    min-height:800px;
+
+    display:flex;
+
+    align-items:center;
+
+    color:var(--text);
+
+}
+
+
+#a {
+
+    width:100%;
+
+    max-width:1600px;
+
+    margin:auto;
+
+}
+
+
+
+/* HEADER */
+
+.gameHeader {
+
+    text-align:center;
+
+    margin-bottom:4em;
+
+}
+
+
+.gameHeader h1 {
+
+    font-size:3.5em;
+
+    letter-spacing:3px;
+
+    margin-bottom:.3em;
+
+}
+
+
+.gameHeader p {
+
+    color:#555;
+
+    font-size:1.3em;
+
+}
+
+
+
+/* SLIDER */
+
+/* =========================
+   SLIDER
+========================= */
+
+/* =========================
+   SLIDER
+========================= */
+
+.slide {
+
+    min-height:700px;
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:5em;
+
+    padding:0 7em;
+
+    position:relative;
+
+}
+
+
+/* =========================
+   SLIDER TEXT
+========================= */
+
+/* =========================
+   SLIDER TEXT PANEL
+========================= */
+
+#text {
+
+    flex:1;
+
+    height:500px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    color:#222;
+
+    padding:3em;
+
+    background:white;
+
+    border-radius:25px;
+
+    box-shadow:
+            0 20px 50px rgba(0,0,0,.12);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+/* Red accent line */
+
+#text::before {
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    height:100%;
+
+    width:8px;
+
+    background:#ff4655;
+
+}
+
+
+
+/* Title */
+
+#text h1 {
+
+    font-size:3.5em;
+
+    margin:0 0 1rem;
+
+    color:#222;
+
+    line-height:1.1;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+}
+
+
+/* Description */
+
+#text p {
+
+    font-size:1.2em;
+
+    line-height:1.8;
+
+    color:#555;
+
+    margin:0;
+
+    max-width:650px;
+
+}
+
+
+
+/* Small hover effect */
+
+#text:hover {
+
+    transform:translateY(-5px);
+
+    box-shadow:
+            0 30px 60px rgba(0,0,0,.18);
+
+    transition:.3s ease;
+
+}
+
+
+/* =========================
+   SLIDER IMAGE
+========================= */
+
+#sliderImage {
+
+    width:100%;
+
+    max-width:900px;
+
+    height:450px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    display:block;
+
+    box-shadow:
+            0 25px 60px rgba(0,0,0,.25);
+
+}
+
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+.slide img,
+#text {
+
+    transition:.35s ease;
+
+}
+
+
+.slide-change {
+
+    opacity:0;
+
+    transform:translateX(40px);
+
+}
+
+
+
+/* =========================
+   ARROWS
+========================= */
+
+
+.nav {
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    background:white;
+
+    border:none;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    box-shadow:
+            0 10px 25px rgba(0,0,0,.2);
+
+    transition:.3s;
+
+    z-index:10;
+
+}
+
+
+.nav:hover {
+
+    background:#ff4655;
+
+    transform:scale(1.1);
+
+}
+
+
+.nav img {
+
+    width:25px;
+
+}
+
+
+#prev {
+
+    position:absolute;
+
+    left:20px;
+
+}
+
+
+#prev img {
+
+    transform:rotate(180deg);
+
+}
+
+
+#next {
+
+    position:absolute;
+
+    right:20px;
+
+}
+
+
+
+/* =========================
+   COUNTER
+========================= */
+
+#slideCounter {
+
+    margin-top:2em;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    color:#222;
+
+    font-size:1.3em;
+
+    font-weight:bold;
+
+}
+
+
+.progress {
+
+    width:100px;
+
+    height:3px;
+
+    background:#ff4655;
+
+}
+
+
+/* =========================
+   NEWS
+========================= */
+
+#newsSection {
+
+    width:100%;
+
+    min-height:1000px;
+
+    padding:6em 8em 25em;
+
+    color:var(--text);
+
+    text-align:center;
+}
+
+#newsSection > h1 {
+
+    font-size:3em;
+
+    margin-bottom:2em;
+}
+
+
+#newsContainer {
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:stretch;
+
+    gap:2em;
+}
+
+.newsCard {
+
+    width:30%;
+
+    background:white;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    text-align:left;
+
+    box-shadow:
+            0 5px 20px rgba(0,0,0,.15);
+
+    transition:.3s;
+}
+
+.newsCard:hover {
+
+    transform:translateY(-10px);
+}
+
+
+.newsCard img {
+
+    width:100%;
+
+    height:200px;
+
+    object-fit:cover;
+}
+
+
+.newsCard h2 {
+
+    color:var(--text);
+
+    padding:0 20px;
+}
+
+
+.newsCard p {
+
+    color:#555;
+
+    padding:0 20px 20px;
+
+    line-height:1.5;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+#contactSection {
+    scroll-margin-top:0;
+}
+
+
+.footer {
+
+    background:#1b1b1b;
+
+    color:white;
+
+    width:100%;
+
+    min-height:20em;
+
+    padding:3em 5%;
+
+    display:flex;
+
+    justify-content:space-evenly;
+
+    align-items:flex-start;
+
+    flex-wrap:wrap;
+}
+
+
+.footerColumn {
+
+    width:250px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:.8em;
+}
+
+
+.footerColumn h3 {
+
+    margin:0 0 .8em;
+
+    color:#d13639;
+
+    font-size:1.5rem;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+}
+
+
+.footerColumn p {
+
+    margin:0;
+
+    color:#cfcfcf;
+
+    line-height:1.6;
+}
+
+
+.footerColumn a {
+
+    color:#cfcfcf;
+
+    text-decoration:none;
+
+    transition:.25s;
+}
+
+
+.footerColumn a:hover {
+
+    color:#d13639;
+
+    padding-left:6px;
+}
+
+
+.footerBottom {
+
+    background:#151515;
+
+    color:#888;
+
+    text-align:center;
+
+    padding:1.5em 10%;
+
+    line-height:1.6;
+
+    border-top:1px solid #333;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+#overlay {
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.7);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:999;
+}
+
+
+#overlay.show {
+
+    opacity:1;
+
+    visibility:visible;
+}
+
+
+#teamModal {
+
+    width:420px;
+
+    max-width:90%;
+
+    background:#202020;
+
+    color:white;
+
+    padding:2rem;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    box-shadow:0 0 35px rgba(0,0,0,.5);
+
+    transform:scale(.9);
+
+    transition:.3s;
+
+    position:relative;
+}
+
+
+#overlay.show #teamModal {
+
+    transform:scale(1);
+}
+
+
+#teamModal h2 {
+
+    color:var(--riot-red);
+
+    margin-bottom:1rem;
+}
+
+
+#teamModal p {
+
+    color:#d0d0d0;
+
+    line-height:1.7;
+}
+
+
+#closeModal {
+
+    position:absolute;
+
+    top:10px;
+
+    right:15px;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:1.8rem;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+
+#closeModal:hover {
+
+    color:var(--riot-red);
+}
+
+
+/* =========================
+   EXTRA
+========================= */
+
+#aboutSection,
+#gamesSection {
+    margin-bottom:10em;
+}
+
+#newsSection {
+    min-height: 900px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px) {
+
+    #sideNav {
+        left:10px;
+    }
+
+
+    #main {
+        padding:3em 4em;
+    }
+
+
+    #images {
+        flex-wrap:wrap;
+    }
+
+
+    #images img {
+        width:30%;
+    }
+
+
+    .slide {
+
+        gap:2em;
+
+        padding:0 4em;
+    }
+
+
+    #sliderImage {
+
+        width:45%;
+    }
+
+
+    #newsSection {
+
+        padding:5em 4em;
+    }
+
+}
+
+
+
+@media(max-width:650px) {
+
+
+    #sideNav {
+
+        display:none;
+    }
+
+
+    #toolbar {
+
+        padding-left:1em;
+    }
+
+
+    #main {
+
+        padding:2em;
+    }
+
+
+    #images {
+
+        flex-direction:column;
+    }
+
+
+    #images img {
+
+        width:80%;
+    }
+
+
+    .slide {
+
+        flex-direction:column;
+
+        padding:0 2em;
+    }
+
+
+    #sliderImage {
+
+        width:80%;
+    }
+
+
+    .nav {
+
+        width:45px;
+
+        height:45px;
+    }
+
+
+    #prev {
+
+        left:-10px;
+    }
+
+
+    #next {
+
+        right:-10px;
+    }
+
+
+    #newsSection {
+
+        padding:4em 2em;
+    }
+
+
+    #newsContainer {
+
+        flex-direction:column;
+    }
+
+
+    .newsCard {
+
+        width:100%;
+    }
+
+
+    #team {
+
+        margin-right:1em;
+    }
+
+}
